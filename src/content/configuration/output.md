@@ -162,12 +162,13 @@ Tells webpack to enable [cross-origin](https://developer.mozilla.org/en/docs/Web
 - `'use-credentials'` - Enable cross-origin loading __with credentials__
 
 
-## `output.jsonpScriptType`
+## `output.scriptType`
 
-`string = 'text/javascript': 'module' | 'text/javascript'`
+`string = 'text/javascript': 'module' | 'text/javascript'` `false`
 
 Allows customization of `type` attribute of `script` tags that webpack injects into the DOM to download async chunks.
 
+- `false`: Disable the customization.
 - `'text/javascript'`: Default `type` in HTML5 and required for some browsers in HTML4.
 - `'module'`: Causes the code to be treated as a JavaScript module.
 
@@ -1204,7 +1205,7 @@ module.exports = {
 
 `boolean = true`
 
-Allow outputting JavaScript files as module type. It sets `output.iife` to `false`, `output.libraryTarget` to `'module'`, `output.jsonpScriptType` to `'module'` and `terserOptions.module` to `true`
+Allow outputting JavaScript files as module type. It sets `output.iife` to `false`, `output.libraryTarget` to `'module'`, `output.scriptType` to `'module'` and `terserOptions.module` to `true`
 
 W> `output.module` is an experimental feature and can be enabled by setting [`experiments.outputModule`](/configuration/experiments/#experiments) to `true`.
 
